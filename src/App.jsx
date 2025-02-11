@@ -1,8 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { desafios } from "./services/data";
+import Desafio from "./components/Desafio";
 function App() {
   const [desafio, setDesafio] = useState("");
+
+  const [oscuro, setOscuro] = useState(false);
 
   function desafioRandom() {
     const desafioRandom = desafios[Math.floor(Math.random() * desafios.length)];
@@ -21,10 +24,15 @@ function App() {
             <input placeholder="Crea tu propio desafio..." />
             <button className="gd-boton-generar">Crear</button>
           </div>
-          <button className="gd-fondo-oscuro">🌙🌞</button>
+          <button
+            className={oscuro ? "gd-fondo-blanco" : "gd-fondo-oscuro"}
+            onClick={() => setOscuro(!oscuro)}
+          >
+            {oscuro ? "🌙" : "🌞"}
+          </button>
         </div>
       </header>
-      <main></main>
+      <main>{desafio && <Desafio frase={desafio} />}</main>
     </>
   );
 }

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import "./Desafio.css";
 
-// Like Button TODO
-function Desafio() {
-  return <div></div>;
+function Desafio({ frase }) {
+  return (
+    <div className="gd-desafio">
+      <h2>{frase}</h2>
+    </div>
+  );
 }
 
 export default Desafio;
