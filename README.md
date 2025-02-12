@@ -6,9 +6,12 @@ Un generador que muestra desafíos creativos al azar, como "Escribe una historia
 
 ## 📌 Extras:
 
-- Personalizar desafíos agregando nuevos
+- ✅ Personalizar desafíos agregando nuevos
+
+### A futuro TODO tras acabar parte 2 Teoria:
+
 - Modo Oscuro/Blanco ( falta el background con useEffect TODO)
-- Guardar desafíos favoritos en localStorage ( a futuro TODO tras acabar parte 2 Teoria)
+- Guardar desafíos favoritos en localStorage
 
 # Escritorio
 

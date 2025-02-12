@@ -32,6 +32,7 @@ function App() {
           </button>
           <div className={oscuro ? "gd-crear-blanco" : "gd-crear"}>
             <input
+              value={input}
               onChange={recogerInput}
               placeholder="Crea tu propio desafio..."
             />
