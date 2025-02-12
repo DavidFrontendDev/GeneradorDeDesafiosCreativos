@@ -50,6 +50,8 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .gd-fondo-blanco {
   background-color: rgb(59, 58, 58);

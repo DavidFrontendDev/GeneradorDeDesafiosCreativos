@@ -4,12 +4,22 @@ import { desafios } from "./services/data";
 import Desafio from "./components/Desafio";
 function App() {
   const [desafio, setDesafio] = useState("");
-
+  const [input, setInput] = useState("");
   const [oscuro, setOscuro] = useState(false);
 
   function desafioRandom() {
     const desafioRandom = desafios[Math.floor(Math.random() * desafios.length)];
     setDesafio(desafioRandom);
+  }
+
+  function recogerInput(e) {
+    setInput(e.target.value);
+  }
+  function cambiarDesafio() {
+    if (input !== "") {
+      setDesafio(input);
+      setInput("");
+    }
   }
 
   return (
@@ -21,8 +31,13 @@ function App() {
             Generar
           </button>
           <div className={oscuro ? "gd-crear-blanco" : "gd-crear"}>
-            <input placeholder="Crea tu propio desafio..." />
-            <button className="gd-boton-generar">Crear</button>
+            <input
+              onChange={recogerInput}
+              placeholder="Crea tu propio desafio..."
+            />
+            <button onClick={cambiarDesafio} className="gd-boton-generar">
+              Crear
+            </button>
           </div>
           <button
             className={oscuro ? "gd-fondo-blanco" : "gd-fondo-oscuro"}
