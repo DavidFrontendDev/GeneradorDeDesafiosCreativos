@@ -59,3 +59,23 @@ main {
   border: none;
   cursor: pointer;
 }
+.gd-generar-blanco {
+  background-color: #c4c4c4;
+  border-radius: 9px;
+  box-shadow: 0px 0px 10px #a3a3a3;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  color: rgb(32, 32, 32);
+}
+.gd-crear-blanco {
+  background-color: #c4c4c4;
+  border-radius: 9px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

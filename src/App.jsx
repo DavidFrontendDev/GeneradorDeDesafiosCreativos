@@ -15,12 +15,12 @@ function App() {
   return (
     <>
       <header>
-        <div className="gd-generar">
+        <div className={oscuro ? "gd-generar-blanco" : "gd-generar"}>
           <h2>Generador de Desafios Creativos 😂</h2>
           <button className="gd-boton-generar" onClick={() => desafioRandom()}>
             Generar
           </button>
-          <div className="gd-crear">
+          <div className={oscuro ? "gd-crear-blanco" : "gd-crear"}>
             <input placeholder="Crea tu propio desafio..." />
             <button className="gd-boton-generar">Crear</button>
           </div>
@@ -32,7 +32,7 @@ function App() {
           </button>
         </div>
       </header>
-      <main>{desafio && <Desafio frase={desafio} />}</main>
+      <main>{desafio && <Desafio frase={desafio} modoOscuro={oscuro} />}</main>
     </>
   );
 }

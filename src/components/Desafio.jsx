@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Desafio.css";
 
-function Desafio({ frase }) {
+function Desafio({ frase, modoOscuro }) {
   return (
-    <div className="gd-desafio">
+    <div className={modoOscuro ? "gd-desafio-blanco" : "gd-desafio"}>
       <h2>{frase}</h2>
     </div>
   );
