@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { desafios } from "./services/data";
 import Desafio from "./components/Desafio";
@@ -7,17 +7,31 @@ function App() {
   const [input, setInput] = useState("");
   const [oscuro, setOscuro] = useState(false);
 
+  useEffect(() => {
+    document.body.style.backgroundColor = oscuro ? "#f4f4f4" : "#202020";
+    document.body.style.color = oscuro ? "#202020" : "whitesmoke";
+  }, [oscuro]);
+
+  useEffect(() => {
+    const desafioGuardado = localStorage.getItem("desafio");
+    if (desafioGuardado) {
+      setDesafio(desafioGuardado);
+    }
+  }, []);
+
   function desafioRandom() {
     const desafioRandom = desafios[Math.floor(Math.random() * desafios.length)];
     setDesafio(desafioRandom);
+    localStorage.setItem("desafio", desafioRandom);
   }
 
   function recogerInput(e) {
     setInput(e.target.value);
   }
   function cambiarDesafio() {
-    if (input !== "") {
+    if (input.trim() !== "") {
       setDesafio(input);
+      localStorage.setItem("desafio", input);
       setInput("");
     }
   }
@@ -48,7 +62,9 @@ function App() {
           </button>
         </div>
       </header>
-      <main>{desafio && <Desafio frase={desafio} modoOscuro={oscuro} />}</main>
+      <main>
+        {desafio.length > 0 && <Desafio frase={desafio} modoOscuro={oscuro} />}
+      </main>
     </>
   );
 }
