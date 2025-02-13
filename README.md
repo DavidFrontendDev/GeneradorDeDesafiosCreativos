@@ -1,4 +1,4 @@
-# Generador de Desafíos Creativos
+# [😂 Generador de Desafíos Creativos]()
 
 ## 📌 Descripción del proyecto:
 
@@ -7,14 +7,17 @@ Un generador que muestra desafíos creativos al azar, como "Escribe una historia
 ## 📌 Extras:
 
 - ✅ Personalizar desafíos agregando nuevos
-
-### A futuro TODO tras acabar parte 2 Teoria:
-
-- Modo Oscuro/Blanco
-- Guardar desafíos favoritos en localStorage
+- ✅ Modo Oscuro/Blanco
+- ✅ Guardar desafíos en localStorage
 
 # Escritorio
 
+[![Imagen](https://i.imgur.com/6av4tzu.png)]()
+
 # Tablet
 
+[![Imagen](https://i.imgur.com/R7QSFP9.png)]()
+
 # Movil
+
+[![Imagen](https://i.imgur.com/tS0F2Q9.png)]()
